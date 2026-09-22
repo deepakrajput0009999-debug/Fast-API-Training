@@ -1,5 +1,11 @@
 from fastapi import FastAPI
 app = FastAPI()
 @app.get("/")
-def read_root():
-    return {"message":"hello world","number":44,"is_fun":True}
+def home():
+    return {"page":"Home"}
+@app.get("/about")
+def about():
+    return {"page":"About","author":"Deepak"}
+@app.get("/health")
+def health():
+    return {"status":"ok"}
