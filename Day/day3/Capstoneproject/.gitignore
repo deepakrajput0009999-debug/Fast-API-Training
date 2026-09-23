@@ -1,0 +1,83 @@
+# ==========================================
+# FastAPI / Python Standard .gitignore
+# ==========================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments (Crucial to exclude)
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Environment variables & secrets (NEVER commit these)
+.env
+.env.*
+!.env.example
+*.env
+
+# FastAPI / Uvicorn Logs & Application dumps
+logs/
+*.log
+*.log.*
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Local Databases (FastAPI tutorials frequently use SQLite)
+*.sqlite3
+*.db
+*.db-journal
+
+# Testing & Coverage (Pytest / HTTPX)
+.pytest_cache/
+.htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+
+# Type Checkers & Linters (Mypy, Ruff)
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Database Migrations (Optional: ignore Alembic cache if used)
+.lettercase
+alembic.ini
+
+# Package / Distribution builds
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Editor & IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
