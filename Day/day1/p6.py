@@ -1,3 +1,3 @@
-# Dictionary: collection of key and value pairs
-person = {"name": "Deepak","age": 20}
+# Dictionary: collection of key & value pairs
+person = { "name": "Bipin", "age":25}
 print(person["name"])

@@ -4,23 +4,31 @@ app = FastAPI()
 @app.get("/")
 def home():
     return {"page":"Home"}
+
 @app.get("/about")
 def about():
-    return {"page":"About","author":"Deepak"}
+    return {"page":"About","author":"Rakesh"}
+
 @app.get("/health")
 def health():
     return {"status":"ok"}
+
+# POST request
 @app.post("/create")
 def create_something():
-    return {"message":"Created="}
+    return {"message":"Created"}
+
+# Path Parameters
 @app.get("/student/{usn}")
 def get_result(usn):
     return {"Result":"Distinction","usn":usn}
-# path parameters with type int
+
+# Path Parameters with Type Hint
 @app.get("/candidate/{rollno}")
-def get_result(rollno:int):
+def get_candidate(rollno:int):
     return {"Result":"Distinction","rollno":rollno,"type":str(type(rollno))}
-# Pydantic model
+
+# Pydantic Model
 class Item(BaseModel):
     name:str
     price:float
@@ -28,4 +36,4 @@ class Item(BaseModel):
 
 @app.post("/items")
 def create_item(item:Item):
-    return {"recieved":item, "total_price":item.price*1.18}    
+    return {"received":item, "total_price":item.price*1.18}
